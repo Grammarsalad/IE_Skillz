@@ -1,0 +1,34 @@
+//@0 to @4000
+//@0 to @50: groups
+//@51 to @100: subcomponents
+//@101 to @900: Components
+//@901 to @1000: error and misc
+// @3000 to @4000: Requirements
+
+@0 = ~Group Name~
+
+//@51 to @100: subcomponents
+@51 = ~Subcomponent Name~
+
+//@101 to @900: Components
+@101 = ~Install This component~
+@102 = ~Install That component~
+
+//@901 to @1000: error and misc
+@901 = ~EE games only! ... for now~
+@902 = ~Priest scrolls have already been added by other means!~
+
+///////////////////////////////////////////////////////////////////////////
+// Requirements                                                          //
+///////////////////////////////////////////////////////////////////////////
+@3000 = ~Component requires BG: EE, BGII: EE, or EET~
+@3001 = ~DLCMerger is needed before modding SoD games~
+@3002 = ~EEex is required for installation~
+@3003 = ~Barbarian Rage is required for Feral Senses~
+@3004 = ~Component requires BG: EE, BGII: EE, IWDEE, or EET~
+@3005 = ~Barbarian Rage has been removed~
+@3006 = ~Component requires BGII: EE, IWDEE, or EET~
+@3007 = ~Priest scrolls have already been added!~
+@3008 = ~Component Skipped: Spell Revisions Installed.~
+@3009 = ~Component requires IWDEE and Lefreut UI~
+@3010 = ~No HLAs detected~

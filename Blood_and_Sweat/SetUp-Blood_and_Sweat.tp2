@@ -1,0 +1,205 @@
+BACKUP ~backup/Mod_Name~
+AUTHOR ~Grammarsalad~
+//README ~Mod_Name\Mod_Name_README.pdf~
+
+VERSION ~1.00.00~
+
+
+ALWAYS
+
+    OUTER_SPRINT ~folder~ ~Mod_Name~ // Replace "Mod_Name" with the actual mod folder name. 
+
+ 	ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+          OUTER_SPRINT ~game~ ~bg2ee~
+    END
+
+ 	ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+          OUTER_SPRINT ~game~ ~bgee~
+    END
+
+ 	ACTION_IF GAME_IS ~iwdee~ THEN BEGIN
+          OUTER_SPRINT ~game~ ~iwdee~
+    END
+
+ 	ACTION_IF GAME_IS ~bg2 bgt~ THEN BEGIN
+          OUTER_SPRINT ~game~ ~bg~
+          OUTER_SPRINT ~style~ ~vanilla_style~
+    END
+
+ 	ACTION_IF GAME_IS ~bg~ THEN BEGIN
+          OUTER_SPRINT ~game~ ~no~
+          OUTER_SPRINT ~style~ ~no_style~
+    END
+
+ 	ACTION_IF GAME_IS ~bgee bg2ee eet~ THEN BEGIN
+          OUTER_SPRINT ~style~ ~bgee_style~
+    END
+
+ 	ACTION_IF GAME_IS ~iwdee~ THEN BEGIN
+          OUTER_SPRINT ~style~ ~iwdee_style~
+    END
+
+    INCLUDE ~Mod_Name/Mod_Name_settings.ini~
+
+    INCLUDE ~Mod_Name/lib/variables.ini~
+
+    INCLUDE ~Mod_Name/lib/item_casting.tpa~
+
+    INCLUDE ~Mod_Name/lib/snm_functions.tpa~
+
+    INCLUDE ~Mod_Name/lib/lib.tpa~  //morph's hla functions
+
+    INCLUDE ~Mod_Name/lib/hla_actions.tpa~  //SD's hla functions
+
+    INCLUDE ~Mod_Name/lib/add_headers.tpa~
+
+    INCLUDE ~Mod_Name/lib/add_spell_ex.tpa~
+
+    INCLUDE ~Mod_Name/lib/effect_return.tpa~
+
+    INCLUDE ~Mod_Name/lib/add_sumtable.tpa~
+
+    INCLUDE ~Mod_Name/lib/SEQUENCER_MENU.tpa~
+
+    INCLUDE ~Mod_Name/lib/alter_effect.tpa~
+
+    INCLUDE ~Mod_Name/lib/remove_lines.tpa~
+
+    INCLUDE ~Mod_Name/lib/summon_table.tpa~
+
+    INCLUDE ~Mod_Name/lib/splprot_attributes.tpa~
+
+    INCLUDE ~Mod_Name/lib/spell_to_innate.tpa~
+
+    INCLUDE ~Mod_Name/lib/spell_clone_effects.tpa~
+
+    INCLUDE ~Mod_Name/lib/bg2fp_effect_batches_fnp.tpa~
+
+    INCLUDE ~Mod_Name/lib/bg2fp_effect_batches_b_vise.tpa~
+
+    INCLUDE ~Mod_Name/lib/bg2fp_effect_batches_spell_saves.tpa~
+
+    INCLUDE ~Mod_Name/lib/extra_alter_effect.tpa~
+
+    INCLUDE ~Mod_Name/lib/scroll_placement.tpa~
+
+END
+
+//Below from IWDification. Looks like a way to check spell.ids for particular spells...
+//ACTION_IF (!FILE_CONTAINS_EVALUATED(~spell.ids~ ~WIZARD_SNILLOCS_SNOWBALL_SWARM~) OR override_arcane) BEGIN
+
+//need to keep my options open
+
+ASK_EVERY_COMPONENT
+
+/* Language Settings */
+AUTO_TRA ~Mod_Name/tra/%s~
+LANGUAGE ~English~ ~english~
+         ~Mod_Name/tra/english/setup.tra~
+//       ~Mod_Name/tra/english/new_spells.tra~  //for new spells
+//       ~Mod_Name/tra/english/IWD_spells.tra~  //for IWDEE spells
+//       ~Mod_Name/tra/english/enchant_items.tra~
+//       ~Mod_Name/tra/english/cantrips.tra~  //for cantrips
+//       ~Mod_Name/tra/english/revised.tra~  //for revised
+//       ~Mod_Name/tra/english/items.tra~  //for items
+//       ~Mod_Name/tra/english/icons.tra~   //icons
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////                                                                          ////////////////////////
+////////////////////////             Mod_Name: ###=###: Group Name                             ////////////////////////
+////////////////////////                                                                          ////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+///////                                                   ///////
+///////     Components ###-###: Subcomponent Name         ///////
+///////                                                   ///////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+//setup tra guide:
+
+//@0 to @50: groups
+//@51 to @100: subcomponents
+//@101 to @900: Components
+//@901 to @1000: error and misc
+// @3000 to @4000: Requirements
+
+//_______________________________
+//
+//	###: Component Name (101)
+//
+//_________________________________________
+
+BEGIN @101  // Install Component Name
+SUBCOMPONENT @51 //Subcomponent Name
+DESIGNATED 101
+GROUP @0  //Group Name
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @901 // ~EE games only! For ee games only~
+
+//set relevant variable(s) (from ini) relevant to this component  
+OUTER_SET b_ini_var  = 1
+
+
+///////////////////////////////////////
+//////////// player modified variables
+
+//call up and red the var categories
+LAM b_group_var_settings
+
+//install iwdee spells if applicable
+ACTION_IF ("%style%" STRING_COMPARE_CASE "iwdee_style" != 0) BEGIN      //Difference in style -- e.g. Not IWDEE style
+//  INCLUDE ~%folder%/engine/b_stuff.tpa~  //
+END
+
+ACTION_IF ("%style%" STRING_COMPARE_CASE "iwdee_style" = 0) BEGIN      //Difference in style -- e.g. IS IWDEE style
+//  INCLUDE ~%folder%/engine/b_stuff.tpa~  //
+END
+
+
+//the actual component(s)
+// INCLUDE ~%folder%/components/SUBFOLDER/Setup_Component.tpa~  //
+
+
+//_______________________________
+//
+//	###: Component Name (102)
+//
+//_________________________________________
+
+BEGIN @102  // Install Component Name
+SUBCOMPONENT @51 //Subcomponent Name
+DESIGNATED 102
+GROUP @0  //Group Name
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @901 // ~EE games only! For ee games only~
+
+//set relevant variable(s) (from ini) relevant to this component  
+OUTER_SET b_ini_var  = 2
+
+
+///////////////////////////////////////
+//////////// player modified variables
+
+//call up and red the var categories
+LAM b_group_var_settings
+
+//install iwdee spells if applicable
+ACTION_IF ("%style%" STRING_COMPARE_CASE "iwdee_style" != 0) BEGIN      //Difference in style -- e.g. Not IWDEE style
+//  INCLUDE ~%folder%/engine/b_stuff.tpa~  //
+END
+
+ACTION_IF ("%style%" STRING_COMPARE_CASE "iwdee_style" = 0) BEGIN      //Difference in style -- e.g. IS IWDEE style
+//  INCLUDE ~%folder%/engine/b_stuff.tpa~  //
+END
+
+
+//the actual component(s)
+// INCLUDE ~%folder%/comp/Setup_Component.tpa~  //
