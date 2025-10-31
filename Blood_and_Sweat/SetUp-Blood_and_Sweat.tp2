@@ -1,13 +1,13 @@
-BACKUP ~backup/Mod_Name~
+BACKUP ~backup/Blood_and_Sweat~
 AUTHOR ~Grammarsalad~
-//README ~Mod_Name\Mod_Name_README.pdf~
+//README ~Blood_and_Sweat\Blood_and_Sweat_README.pdf~
 
 VERSION ~1.00.00~
 
 
 ALWAYS
 
-    OUTER_SPRINT ~folder~ ~Mod_Name~ // Replace "Mod_Name" with the actual mod folder name. 
+    OUTER_SPRINT ~folder~ ~Blood_and_Sweat~ // Replace "Mod_Name" with the actual mod folder name. 
 
  	ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
           OUTER_SPRINT ~game~ ~bg2ee~
@@ -39,49 +39,49 @@ ALWAYS
           OUTER_SPRINT ~style~ ~iwdee_style~
     END
 
-    INCLUDE ~Mod_Name/Mod_Name_settings.ini~
+    INCLUDE ~Blood_and_Sweat/Blood_and_Sweat_settings.ini~
 
-    INCLUDE ~Mod_Name/lib/variables.ini~
+    INCLUDE ~Blood_and_Sweat/lib/variables.ini~
 
-    INCLUDE ~Mod_Name/lib/item_casting.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/item_casting.tpa~
 
-    INCLUDE ~Mod_Name/lib/snm_functions.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/snm_functions.tpa~
 
-    INCLUDE ~Mod_Name/lib/lib.tpa~  //morph's hla functions
+    INCLUDE ~Blood_and_Sweat/lib/lib.tpa~  //morph's hla functions
 
-    INCLUDE ~Mod_Name/lib/hla_actions.tpa~  //SD's hla functions
+    INCLUDE ~Blood_and_Sweat/lib/hla_actions.tpa~  //SD's hla functions
 
-    INCLUDE ~Mod_Name/lib/add_headers.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/add_headers.tpa~
 
-    INCLUDE ~Mod_Name/lib/add_spell_ex.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/add_spell_ex.tpa~
 
-    INCLUDE ~Mod_Name/lib/effect_return.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/effect_return.tpa~
 
-    INCLUDE ~Mod_Name/lib/add_sumtable.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/add_sumtable.tpa~
 
-    INCLUDE ~Mod_Name/lib/SEQUENCER_MENU.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/SEQUENCER_MENU.tpa~
 
-    INCLUDE ~Mod_Name/lib/alter_effect.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/alter_effect.tpa~
 
-    INCLUDE ~Mod_Name/lib/remove_lines.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/remove_lines.tpa~
 
-    INCLUDE ~Mod_Name/lib/summon_table.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/summon_table.tpa~
 
-    INCLUDE ~Mod_Name/lib/splprot_attributes.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/splprot_attributes.tpa~
 
-    INCLUDE ~Mod_Name/lib/spell_to_innate.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/spell_to_innate.tpa~
 
-    INCLUDE ~Mod_Name/lib/spell_clone_effects.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/spell_clone_effects.tpa~
 
-    INCLUDE ~Mod_Name/lib/bg2fp_effect_batches_fnp.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/bg2fp_effect_batches_fnp.tpa~
 
-    INCLUDE ~Mod_Name/lib/bg2fp_effect_batches_b_vise.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/bg2fp_effect_batches_b_vise.tpa~
 
-    INCLUDE ~Mod_Name/lib/bg2fp_effect_batches_spell_saves.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/bg2fp_effect_batches_spell_saves.tpa~
 
-    INCLUDE ~Mod_Name/lib/extra_alter_effect.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/extra_alter_effect.tpa~
 
-    INCLUDE ~Mod_Name/lib/scroll_placement.tpa~
+    INCLUDE ~Blood_and_Sweat/lib/scroll_placement.tpa~
 
 END
 
@@ -93,16 +93,16 @@ END
 ASK_EVERY_COMPONENT
 
 /* Language Settings */
-AUTO_TRA ~Mod_Name/tra/%s~
+AUTO_TRA ~Blood_and_Sweat/tra/%s~
 LANGUAGE ~English~ ~english~
-         ~Mod_Name/tra/english/setup.tra~
-//       ~Mod_Name/tra/english/new_spells.tra~  //for new spells
-//       ~Mod_Name/tra/english/IWD_spells.tra~  //for IWDEE spells
-//       ~Mod_Name/tra/english/enchant_items.tra~
-//       ~Mod_Name/tra/english/cantrips.tra~  //for cantrips
-//       ~Mod_Name/tra/english/revised.tra~  //for revised
-//       ~Mod_Name/tra/english/items.tra~  //for items
-//       ~Mod_Name/tra/english/icons.tra~   //icons
+         ~Blood_and_Sweat/tra/english/setup.tra~
+//       ~Blood_and_Sweat/tra/english/new_spells.tra~  //for new spells
+//       ~Blood_and_Sweat/tra/english/IWD_spells.tra~  //for IWDEE spells
+//       ~Blood_and_Sweat/tra/english/enchant_items.tra~
+//       ~Blood_and_Sweat/tra/english/cantrips.tra~  //for cantrips
+//       ~Blood_and_Sweat/tra/english/revised.tra~  //for revised
+//       ~Blood_and_Sweat/tra/english/items.tra~  //for items
+//       ~Blood_and_Sweat/tra/english/icons.tra~   //icons
 
 
 
@@ -111,7 +111,7 @@ LANGUAGE ~English~ ~english~
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////                                                                          ////////////////////////
-////////////////////////             Mod_Name: ###=###: Group Name                             ////////////////////////
+////////////////////////             Blood_and_Sweat: ###=###: Group Name                             ////////////////////////
 ////////////////////////                                                                          ////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
