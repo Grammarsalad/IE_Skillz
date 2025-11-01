@@ -1,87 +1,76 @@
-BACKUP ~backup/Blood_and_Sweat~
+BACKUP ~backup/Skills_and_Proficiencies~
 AUTHOR ~Grammarsalad~
-//README ~Blood_and_Sweat\Blood_and_Sweat_README.pdf~
+//README ~Skills_and_Proficiencies\Skills_and_Proficiencies_README.pdf~
 
 VERSION ~1.00.00~
 
 
 ALWAYS
 
-    OUTER_SPRINT ~folder~ ~Blood_and_Sweat~ // Replace "Mod_Name" with the actual mod folder name. 
+    OUTER_SPRINT ~folder~ ~Skills_and_Proficiencies~ // Replace "Mod_Name" with the actual mod folder name. 
 
  	ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
-          OUTER_SPRINT ~game~ ~bg2ee~
-    END
+          OUTER_SPRINT ~gamez~ ~eetwo~
+          OUTER_SPRINT ~vroom~ ~eegate~
+   END
 
  	ACTION_IF GAME_IS ~bgee~ THEN BEGIN
-          OUTER_SPRINT ~game~ ~bgee~
+          OUTER_SPRINT ~gamez~ ~eeone~
+          OUTER_SPRINT ~vroom~ ~eegate~
     END
 
  	ACTION_IF GAME_IS ~iwdee~ THEN BEGIN
-          OUTER_SPRINT ~game~ ~iwdee~
+          OUTER_SPRINT ~gamez~ ~ice~
+          OUTER_SPRINT ~vroom~ ~eeice~
     END
 
  	ACTION_IF GAME_IS ~bg2 bgt~ THEN BEGIN
-          OUTER_SPRINT ~game~ ~bg~
-          OUTER_SPRINT ~style~ ~vanilla_style~
+          OUTER_SPRINT ~gamez~ ~bgtwoold~
+          OUTER_SPRINT ~vroom~ ~gate~
     END
 
  	ACTION_IF GAME_IS ~bg~ THEN BEGIN
-          OUTER_SPRINT ~game~ ~no~
-          OUTER_SPRINT ~style~ ~no_style~
+          OUTER_SPRINT ~gamez~ ~no~
+          OUTER_SPRINT ~vroom~ ~nope~
     END
 
  	ACTION_IF GAME_IS ~bgee bg2ee eet~ THEN BEGIN
-          OUTER_SPRINT ~style~ ~bgee_style~
+          OUTER_SPRINT ~vroom~ ~bgee_vroom~
     END
 
  	ACTION_IF GAME_IS ~iwdee~ THEN BEGIN
-          OUTER_SPRINT ~style~ ~iwdee_style~
+          OUTER_SPRINT ~vroom~ ~iwdee_vroom~
     END
 
-    INCLUDE ~Blood_and_Sweat/Blood_and_Sweat_settings.ini~
+    INCLUDE ~Skills_and_Proficiencies/Skills_and_Proficiencies_settings.ini~ 	//player set variables 
 
-    INCLUDE ~Blood_and_Sweat/lib/variables.ini~
+    INCLUDE ~Skills_and_Proficiencies/lib/snm_functions.tpa~ 					//assorted functions 
 
-    INCLUDE ~Blood_and_Sweat/lib/item_casting.tpa~
+    INCLUDE ~Skills_and_Proficiencies/lib/lib.tpa~  							//morph's hla functions
 
-    INCLUDE ~Blood_and_Sweat/lib/snm_functions.tpa~
+    INCLUDE ~Skills_and_Proficiencies/lib/summon_table.tpa~
 
-    INCLUDE ~Blood_and_Sweat/lib/lib.tpa~  //morph's hla functions
+    INCLUDE ~Skills_and_Proficiencies/lib/splprot_attributes.tpa~
 
-    INCLUDE ~Blood_and_Sweat/lib/hla_actions.tpa~  //SD's hla functions
+    INCLUDE ~Skills_and_Proficiencies/lib/bg2fp_effect_batches_fnp.tpa~
 
-    INCLUDE ~Blood_and_Sweat/lib/add_headers.tpa~
+    INCLUDE ~Skills_and_Proficiencies/lib/bg2fp_effect_batches_b_vise.tpa~
 
-    INCLUDE ~Blood_and_Sweat/lib/add_spell_ex.tpa~
+    INCLUDE ~Skills_and_Proficiencies/lib/bg2fp_effect_batches_spell_saves.tpa~
 
-    INCLUDE ~Blood_and_Sweat/lib/effect_return.tpa~
+    INCLUDE ~Skills_and_Proficiencies/lib/ClassSpellTool.tpa~
 
-    INCLUDE ~Blood_and_Sweat/lib/add_sumtable.tpa~
+    INCLUDE ~Skills_and_Proficiencies/lib/item_casting.tpa~
 
-    INCLUDE ~Blood_and_Sweat/lib/SEQUENCER_MENU.tpa~
+    INCLUDE ~Skills_and_Proficiencies/lib/add_headers.tpa~
 
-    INCLUDE ~Blood_and_Sweat/lib/alter_effect.tpa~
+    INCLUDE ~Skills_and_Proficiencies/lib/add_sumtable.tpa~
 
-    INCLUDE ~Blood_and_Sweat/lib/remove_lines.tpa~
+    INCLUDE ~Skills_and_Proficiencies/lib/SEQUENCER_MENU.tpa~
 
-    INCLUDE ~Blood_and_Sweat/lib/summon_table.tpa~
+    INCLUDE ~Skills_and_Proficiencies/lib/spell_to_innate.tpa~
 
-    INCLUDE ~Blood_and_Sweat/lib/splprot_attributes.tpa~
-
-    INCLUDE ~Blood_and_Sweat/lib/spell_to_innate.tpa~
-
-    INCLUDE ~Blood_and_Sweat/lib/spell_clone_effects.tpa~
-
-    INCLUDE ~Blood_and_Sweat/lib/bg2fp_effect_batches_fnp.tpa~
-
-    INCLUDE ~Blood_and_Sweat/lib/bg2fp_effect_batches_b_vise.tpa~
-
-    INCLUDE ~Blood_and_Sweat/lib/bg2fp_effect_batches_spell_saves.tpa~
-
-    INCLUDE ~Blood_and_Sweat/lib/extra_alter_effect.tpa~
-
-    INCLUDE ~Blood_and_Sweat/lib/scroll_placement.tpa~
+    INCLUDE ~Skills_and_Proficiencies/lib/spell_clone_effects.tpa~
 
 END
 
@@ -93,16 +82,16 @@ END
 ASK_EVERY_COMPONENT
 
 /* Language Settings */
-AUTO_TRA ~Blood_and_Sweat/tra/%s~
+AUTO_TRA ~Skills_and_Proficiencies/tra/%s~
 LANGUAGE ~English~ ~english~
-         ~Blood_and_Sweat/tra/english/setup.tra~
-//       ~Blood_and_Sweat/tra/english/new_spells.tra~  //for new spells
-//       ~Blood_and_Sweat/tra/english/IWD_spells.tra~  //for IWDEE spells
-//       ~Blood_and_Sweat/tra/english/enchant_items.tra~
-//       ~Blood_and_Sweat/tra/english/cantrips.tra~  //for cantrips
-//       ~Blood_and_Sweat/tra/english/revised.tra~  //for revised
-//       ~Blood_and_Sweat/tra/english/items.tra~  //for items
-//       ~Blood_and_Sweat/tra/english/icons.tra~   //icons
+         ~Skills_and_Proficiencies/tra/english/setup.tra~
+//       ~Skills_and_Proficiencies/tra/english/new_spells.tra~  //for new spells
+//       ~Skills_and_Proficiencies/tra/english/IWD_spells.tra~  //for IWDEE spells
+//       ~Skills_and_Proficiencies/tra/english/enchant_items.tra~
+//       ~Skills_and_Proficiencies/tra/english/cantrips.tra~  //for cantrips
+//       ~Skills_and_Proficiencies/tra/english/revised.tra~  //for revised
+//       ~Skills_and_Proficiencies/tra/english/items.tra~  //for items
+//       ~Skills_and_Proficiencies/tra/english/icons.tra~   //icons
 
 
 
@@ -111,7 +100,7 @@ LANGUAGE ~English~ ~english~
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////                                                                          ////////////////////////
-////////////////////////             Blood_and_Sweat: ###=###: Group Name                             ////////////////////////
+////////////////////////             Skills_and_Proficiencies: 101-107: Weapon Mastery            ////////////////////////
 ////////////////////////                                                                          ////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -145,24 +134,25 @@ DESIGNATED 101
 GROUP @0  //Group Name
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @901 // ~EE games only! For ee games only~
 
-//set relevant variable(s) (from ini) relevant to this component  
-OUTER_SET b_ini_var  = 1
-
-
 ///////////////////////////////////////
 //////////// player modified variables
 
-//call up and red the var categories
-LAM b_group_var_settings
+//call up and read the var categories set by player
+ LAM b_skills_n_proficiencies
+ 
+//set 'hard coded' variable(s) for this component (where relevant)
+// OUTER_SET b_ini_var  = 1
 
 //install iwdee spells if applicable
-ACTION_IF ("%style%" STRING_COMPARE_CASE "iwdee_style" != 0) BEGIN      //Difference in style -- e.g. Not IWDEE style
+
+ACTION_IF ("%vroom%" STRING_COMPARE_CASE "eeice" != 0) BEGIN      //Difference in vroom -- e.g. Not IWDEE vroom
 //  INCLUDE ~%folder%/engine/b_stuff.tpa~  //
 END
 
-ACTION_IF ("%style%" STRING_COMPARE_CASE "iwdee_style" = 0) BEGIN      //Difference in style -- e.g. IS IWDEE style
+ACTION_IF ("%vroom%" STRING_COMPARE_CASE "eeice" = 0) BEGIN      //Difference in style -- e.g. IS IWDEE style
 //  INCLUDE ~%folder%/engine/b_stuff.tpa~  //
 END
+
 
 
 //the actual component(s)
@@ -192,6 +182,7 @@ OUTER_SET b_ini_var  = 2
 LAM b_group_var_settings
 
 //install iwdee spells if applicable
+
 ACTION_IF ("%style%" STRING_COMPARE_CASE "iwdee_style" != 0) BEGIN      //Difference in style -- e.g. Not IWDEE style
 //  INCLUDE ~%folder%/engine/b_stuff.tpa~  //
 END

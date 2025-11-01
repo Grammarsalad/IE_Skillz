@@ -5,14 +5,24 @@
 //@901 to @1000: error and misc
 // @3000 to @4000: Requirements
 
-@0 = ~Group Name~
+@0 = ~Skills & Proficiencies: Proficiencies~
+@1 = ~Skills & Proficiencies: Skills and Pseudo-Skills~
+@2 = ~Skills & Proficiencies: More Meaningful Stat Bonuses~
 
 //@51 to @100: subcomponents
-@51 = ~Subcomponent Name~
+
+// Weapon Mastery
+@51 = ~Skills & Proficiencies: 101-107: Weapon Mastery~
 
 //@101 to @900: Components
-@101 = ~Install This component~
-@102 = ~Install That component~
+// Weapon Mastery
+@101 = ~Install Component 101: Basic Weapon Mastery: Standard~
+@102 = ~Install Component 102: Basic Weapon Mastery: Everybody is Kung Fu Fighting~
+@103 = ~Install Component 103: Basic Tier-Based Weapon Mastery: Standard (Non-EEEx)~
+@104 = ~Install Component 104: Basic Tier-Based Weapon Mastery (EEEx Required)~
+@105 = ~Install Component 105: No Cows Tier-Based Weapon Mastery: Standard (Non-EEEx)~
+@106 = ~Install Component 106: No Cows Tier-Based Weapon Mastery (EEEx Required)~
+@107 = ~Install Component 107: Class Based Weapon Mastery~
 
 //@901 to @1000: error and misc
 @901 = ~EE games only! ... for now~
