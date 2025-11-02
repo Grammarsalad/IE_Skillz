@@ -5,24 +5,29 @@
 //@901 to @1000: error and misc
 // @3000 to @4000: Requirements
 
-@0 = ~Skills & Proficiencies: Proficiencies~
-@1 = ~Skills & Proficiencies: Skills and Pseudo-Skills~
+@0 = ~Skills & Proficiencies: Skill System~
+@1 = ~Skills & Proficiencies: Skills, Pseudo-Skills and Proficiencies~
 @2 = ~Skills & Proficiencies: More Meaningful Stat Bonuses~
 
 //@51 to @100: subcomponents
 
 // Weapon Mastery
-@51 = ~Skills & Proficiencies: 101-107: Weapon Mastery~
+@51 = ~Skills & Proficiencies: 101-107: Skill System~
+@52 = ~Skills & Proficiencies: 201-207: Weapon Mastery~
 
 //@101 to @900: Components
+// Skill System 
+@101 = ~Install Component 101: Skill System: Weapon Proficiency Menu~
+@102 = ~Install Component 102: Skill System: ~
+
 // Weapon Mastery
-@101 = ~Install Component 101: Basic Weapon Mastery: Standard~
-@102 = ~Install Component 102: Basic Weapon Mastery: Everybody is Kung Fu Fighting~
-@103 = ~Install Component 103: Basic Tier-Based Weapon Mastery: Standard (Non-EEEx)~
-@104 = ~Install Component 104: Basic Tier-Based Weapon Mastery (EEEx Required)~
-@105 = ~Install Component 105: No Cows Tier-Based Weapon Mastery: Standard (Non-EEEx)~
-@106 = ~Install Component 106: No Cows Tier-Based Weapon Mastery (EEEx Required)~
-@107 = ~Install Component 107: Class Based Weapon Mastery~
+@201 = ~Install Component 201: Basic Weapon Mastery: Standard~
+@202 = ~Install Component 202: Basic Weapon Mastery: Everybody is Kung Fu Fighting~
+@203 = ~Install Component 203: Basic Tier-Based Weapon Mastery: Standard (Non-EEEx)~
+@204 = ~Install Component 204: Basic Tier-Based Weapon Mastery (EEEx Required)~
+@205 = ~Install Component 205: No Cows Tier-Based Weapon Mastery: Standard (Non-EEEx)~
+@206 = ~Install Component 206: No Cows Tier-Based Weapon Mastery (EEEx Required)~
+@207 = ~Install Component 207: Class Based Weapon Mastery~
 
 //@901 to @1000: error and misc
 @901 = ~EE games only! ... for now~

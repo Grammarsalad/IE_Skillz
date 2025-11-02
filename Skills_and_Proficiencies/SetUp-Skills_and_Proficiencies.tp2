@@ -2,7 +2,7 @@ BACKUP ~backup/Skills_and_Proficiencies~
 AUTHOR ~Grammarsalad~
 //README ~Skills_and_Proficiencies\Skills_and_Proficiencies_README.pdf~
 
-VERSION ~1.00.00~
+VERSION ~0.00.01~
 
 
 ALWAYS
@@ -100,7 +100,7 @@ LANGUAGE ~English~ ~english~
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////                                                                          ////////////////////////
-////////////////////////             Skills_and_Proficiencies: 101-107: Weapon Mastery            ////////////////////////
+////////////////////////                Skills_and_Proficiencies: 101-???: Skill System           ////////////////////////
 ////////////////////////                                                                          ////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -128,10 +128,10 @@ LANGUAGE ~English~ ~english~
 //
 //_________________________________________
 
-BEGIN @101  // Install Component Name
-SUBCOMPONENT @51 //Subcomponent Name
+BEGIN @101  // Install Component 101: Skill System: Weapon Proficiency Menu
+SUBCOMPONENT @51 //Skills & Proficiencies: 101-107: Skill System
 DESIGNATED 101
-GROUP @0  //Group Name
+GROUP @0  //Skill System
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @901 // ~EE games only! For ee games only~
 
 ///////////////////////////////////////
@@ -194,3 +194,62 @@ END
 
 //the actual component(s)
 // INCLUDE ~%folder%/comp/Setup_Component.tpa~  //
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////                                                                          ////////////////////////
+////////////////////////Skills_and_Proficiencies: 201-???: Skills, Pseudo-Skills and Proficiencies////////////////////////
+////////////////////////                                                                          ////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+///////                                                   ///////
+///////       Components 201-207: Weapon Mastery          ///////
+///////                                                   ///////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+BEGIN @201  // Install Component 201: Basic Weapon Mastery: Standard
+SUBCOMPONENT @52 //Skills & Proficiencies: 201-207: Weapon Mastery
+DESIGNATED 201
+GROUP @1  //Skills, Pseudo-Skills and Proficiencies
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @901 // ~EE games only! For ee games only~
+
+BEGIN @202  // Install Component 202: Basic Weapon Mastery: Everybody is Kung Fu Fighting
+SUBCOMPONENT @52 //Skills & Proficiencies: 201-207: Weapon Mastery
+DESIGNATED 202
+GROUP @1  //Skills, Pseudo-Skills and Proficiencies
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @901 // ~EE games only! For ee games only~
+
+BEGIN @203  // Install Component 203: Basic Tier-Based Weapon Mastery: Standard (Non-EEEx)
+SUBCOMPONENT @52 //Skills & Proficiencies: 201-207: Weapon Mastery
+DESIGNATED 203
+GROUP @1  //Skills, Pseudo-Skills and Proficiencies
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @901 // ~EE games only! For ee games only~
+
+BEGIN @204  // Install Component 204: Basic Tier-Based Weapon Mastery (EEEx Required)
+SUBCOMPONENT @52 //Skills & Proficiencies: 201-207: Weapon Mastery
+DESIGNATED 204
+GROUP @1  //Skills, Pseudo-Skills and Proficiencies
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @901 // ~EE games only! For ee games only~
+
+BEGIN @205  // Install Component 205: No Cows Tier-Based Weapon Mastery: Standard (Non-EEEx)
+SUBCOMPONENT @52 //Skills & Proficiencies: 201-207: Weapon Mastery
+DESIGNATED 205
+GROUP @1  //Skills, Pseudo-Skills and Proficiencies
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @901 // ~EE games only! For ee games only~
+
+BEGIN @206  // Install Component 206: No Cows Tier-Based Weapon Mastery (EEEx Required)
+SUBCOMPONENT @52 //Skills & Proficiencies: 201-207: Weapon Mastery
+DESIGNATED 206
+GROUP @1  //Skills, Pseudo-Skills and Proficiencies
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @901 // ~EE games only! For ee games only~
+
+BEGIN @207  // Install Component 207: Class Based Weapon Mastery
+SUBCOMPONENT @52 //Skills & Proficiencies: 201-207: Weapon Mastery
+DESIGNATED 207
+GROUP @1  //Skills, Pseudo-Skills and Proficiencies
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @901 // ~EE games only! For ee games only~
+

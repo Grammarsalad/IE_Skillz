@@ -1,6 +1,11 @@
+Version 0.00.01
+
 2025-11-01
 
 - Actually working mod skeleton
+
+- Established first two sets of subcomponents
+
 
 2025-10-31
 
